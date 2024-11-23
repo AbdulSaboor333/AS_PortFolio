@@ -1,0 +1,280 @@
+body {
+    background-color: #212427; /* Dark background */
+}
+.section {
+    background-color: #212428; /* Dark box background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Dark shadow */
+    padding: 20px;
+    margin-bottom: 40px;
+    padding: 1rem; /* Padding inside the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Dark shadow for the box */
+}
+.fixed-home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%; /* Home section width */
+    overflow-y: auto;
+    background-color: #212428; /* Dark background for Home section */
+    padding: 20px;
+    z-index: 1000;
+    color: white; /* Text color for Home section */
+    padding-top: 40px;
+}
+ /* Keyframes for the animation */
+ @keyframes colorChange {
+    0% { color: white; }
+    100% { color: red; }
+}
+
+/* Apply the animation to the Abdul Saboor name */
+.animated-name {
+    animation: colorChange 2s ease-in-out infinite alternate;
+}
+
+/* Use Poppins font for the description text */
+.poppins-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+/* About Section */
+/* Add this CSS to your existing styles */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+@keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animate-border {
+    background-size: 200% 200%;
+    animation: gradient-move 3s linear infinite;
+  }
+  
+  .animate-border {
+    position: relative;
+    display: inline-block;
+    padding: 0.125rem; /* Thin gradient border width */
+    border-radius: 0.5rem; /* Rounded corners */
+  }
+  
+  .animate-border > div {
+    background-color: #212428; /* Inner background color */
+    border-radius: 0.375rem; /* Matches the inner content */
+  }
+
+  @keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-border {
+  background-size: 200% 200%;
+  animation: gradient-move 3s linear infinite;
+}
+
+.animate-border {
+  position: relative;
+  display: inline-block;
+  padding: 0.125rem; /* Thin gradient border width */
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+.animate-border > div {
+  background-color: #212428; /* Inner background color */
+  border-radius: 0.375rem; /* Matches the inner content */
+}
+
+
+
+.animate-about {
+    animation: slideIn 0.9s ease-in-out; /* Animation effect */
+}
+
+/* skill Section */
+
+/* Add this CSS to your existing styles */
+.skill-box {
+    background-color: #212428; /* Dark black background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dark shadow effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Padding for the icon */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transform effect */
+}
+
+.skill-box:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.scrollable-content {
+    margin-left: 50%; /* Equal to the width of the fixed section */
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh; /* Full height */
+    padding-top: 150px;
+}
+
+/* Scrollbar Styling (Optional) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444;
+}
+
+/* Modal slide down animation */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-down-animation {
+    animation: slideDown 0.5s ease-in-out forwards;
+}
+
+/* Modal styling */
+#portfolioModal {
+    background-color: #212428;   
+    z-index: 1000;/* Ensure modal appears above all content */
+    position: fixed; /* Position relative to viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    animation: slideDown 0.5s forwards;
+}
+
+.modal-content {
+    width: 80%; /* Increase width slightly (adjust as needed) */
+
+}
+
+
+/* testimonial section */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.testimonial {
+    min-width: 100%; /* Ensure only one testimonial is shown at a time */
+}
+
+button {
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem; /* Add padding for a better button size */
+    border: none; /* Remove default border */
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #4b5563; /* Darker background on hover */
+    transform: scale(1.1); /* Slightly grow on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+
+
+/* For tablets and smaller screens, adjust layout */
+@media (max-width: 1200px) {
+    /* Adjust layout for tablets */
+    .fixed-home {
+        width: 100%; /* Make full width */
+        position: relative; /* Removes fixed position */
+    }
+
+    .scrollable-content {
+        margin-left: 0; /* Align to start */
+        padding-top: 20px;
+    }
+
+    /* Make sure all sections remain visible */
+    .section, .scrollable-content, .modal-content {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Mobile layout adjustments */
+    .fixed-home {
+        position: relative; /* Stack sections vertically */
+        width: 100%;
+        padding: 15px;
+    }
+
+    .scrollable-content {
+        padding: 15px;
+        margin-left: 0; /* Remove offset */
+    }
+
+    .modal-content {
+        width: 90%; /* Full-width modal on mobile */
+    }
+
+    /* Center buttons and other elements for mobile */
+    button {
+        width: 100%;
+        text-align: center;
+    }
+}
